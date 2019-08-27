@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.1)
 
 project(tsl_hat_trie)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3 -fpermissive")
+add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
 
 add_library(tsl_hat_trie INTERFACE)
 # Use tsl::hat_trie as target, more consistent with other libraries conventions (Boost, Qt, ...)
